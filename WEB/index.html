@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cleaneyo</title>
+
+  <script type="text/javascript">
+  </script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+    body, html {height: 100%;  font-family: "Nanum Gothic", sans-serif!important;}
+    h1, h2, h3, h4, h5, h6 {
+        font-family: "Nanum Gothic", sans-serif!important;
+    }
+    .bgimg {
+      min-height: 90%;
+      background-position: center;
+      background-size: cover;
+  }
+
+      .checkbox-wrap {
+          cursor: pointer;
+      }
+
+      .checkbox-wrap .check-icon {
+          display: inline-block;
+          width: 50px;
+          height: 26px;
+          background: url(./img/off.png) left center no-repeat;
+          background-size: 50px 26px;
+          vertical-align: middle;
+          transition-duration: .3s;
+      }
+
+      .checkbox-wrap input[type=checkbox] {
+          display: none;
+      }
+
+      .checkbox-wrap input[type=checkbox]:checked+.check-icon {
+          background-image: url(./img/On.png);
+      }
+
+  </style>
+
+</head>
+
+<body>
+  <!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar" style="background:#00AFFF;color:white;">
+    <a class="w3-bar-item w3-padding-large w3-hide-medium w3-hide-large w3-right" onclick="document.getElementById('id01').style.display='block'"><i style="font-size:30px;" class="fa fa-cog"></i></a>
+    <a href="#" class="w3-bar-item w3-padding-large"><img src="./img/kek.png" height="30" alt=""></a>
+
+    <a onclick="document.getElementById('id01').style.display='block'" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-cog"></i></a>
+  </div>
+</div>
+<br><br>
+
+  <div class="bgimg w3-display-container w3-animate-opacity w3-text-black">
+
+    <div class="w3-container" style="margin:20px 0 10px 0;">
+    <b class="w3-left"style="font-size:16px;color:#00C6ED">Device</b>
+    <p class="w3-right"style="font-size:15px;margin:0;color:black"><i class="fa fa-circle" style="font-size:7px;color:#1DDB16"></i> 기기 정상 </p>
+    </div>
+
+    <div class="w3-container" style="padding:1.4em 16px;background:#BDBDBD">
+    <img src="https://vignette1.wikia.nocookie.net/steven-universe/images/3/35/Notice.png/revision/latest?cb=20151130032136" height="20" style="vertical-align:text-middle;background:white;border-radius:20px;">
+    <b id="notice" style="font-size:13px;margin:0;color:rgba(0,0,0,0.8);font-weight:100">&nbsp; | &nbsp;좌상단 버튼을 눌러 기능 설정을 할 수 있습니다. </b>
+    </div>
+
+    <div>
+        <br>
+        <div style="padding:20px 10%;">
+        <img class="w3-left" style="vertical-align:middle" src="https://via.placeholder.com/100x100" alt="날씨">
+        <w class="w3-right" style="color:grey"><b style="font-size:80px;">2°</b><m style="font-size:40px;">/</m><small style="font-size:20px;"> 23°</small></w><br><br>
+
+        <b class="w3-left" style="clear:both;color:grey">검출되지 않음</b>
+        <b class="w3-right" style="color:grey">닫힘 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+        <b class="w3-left" style="clear:both;color:grey">80%</b>
+        <b class="w3-right" style="color:grey">깨끗함&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+    </div>
+<br style="clear:both;">
+        <h4 style="color:#00AFFF;font-weight:bold;clear:both;margin-top:20px;"> &nbsp; 설정</h4>
+        <div class="w3-large" style="padding:2vw 5vw 0 5vw;width:100%">
+            <h4 style="margin:0;font-size:16px;">창문 닫기 <label class="checkbox-wrap pull-right"><input type="checkbox" id="key_mode" name="key_mode"><i class="check-icon"></i></label></h4>
+            <hr>
+        </div>
+        <div class="w3-large" style="padding:0 5vw 0 5vw;width:100%">
+            <h4 style="margin:0;font-size:16px;">창문 2 닫기 <label class="checkbox-wrap pull-right"><input type="checkbox" id="key_mode" name="key_mode"><i class="check-icon"></i></label></h4>
+            <hr>
+        </div>
+
+
+    </div>
+
+    <div class="w3-display-bottommiddle w3-padding-large" style="font-size:10px">
+      Published by Plsnoerror
+    </div>
+  </div>
+
+
+<!--모달-->
+  <div class="w3-container">
+    <div id="id01" class="w3-modal">
+      <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+
+        <div class="w3-center"><br>
+          <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+          <h5>기능 설정</h5>
+        </div>
+
+        <div class="w3-container">
+          <div class="w3-section">
+              <div>
+                  <div class="w3-large" style="padding:5vw 5vw 0 5vw;">
+
+                      <h4 style="margin:0;font-weight:bold">비 여부 설정      <label class="checkbox-wrap pull-right"><input type="checkbox" id="key_mode" name="key_mode"><i class="check-icon"></i></label></h4>
+                      <small style="margin-bottom:0;font-size:12px;">비가 오면 창문을 자동으로 닫는 기능입니다.</small>
+
+                      <hr>
+                  </div>
+
+                  <div class="w3-large" style="padding:0 5vw">
+
+                      <h4 style="margin:0;font-weight:bold">담배 여부 설정 <label class="checkbox-wrap pull-right"><input type="checkbox" id="auto_mode" name="auto_mode"><i class="check-icon"></i></label></h4>
+                      <small style="margin-bottom:0;font-size:12px;">담배 냄새가 검출되면 자동으로 닫는 기능입니다.</small>
+
+                      <hr>
+                  </div>
+
+                  <div class="w3-large" style="padding:0 5vw">
+
+                      <h4 style="margin:0;font-weight:bold">미세 먼지 여부 설정 <label class="checkbox-wrap pull-right"><input type="checkbox" id="unlock" name="unlock"><i class="check-icon"></i></label></h4>
+                      <small style="margin-bottom:0;font-size:12px;">대기 상태가 좋지 않으면 자동으로 닫는 기능입니다.</small>
+
+                      <hr>
+                  </div>
+          </div>
+        </div>
+
+        <div class="w3-container w3-padding-16 w3-light-grey">
+          <button class="w3-button w3-green w3-right" onclick="cal()">적용</button>
+          <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-red">취소</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+<script type="text/javascript">
+    $('#apply').click(function() {
+        $.ajax({
+            url: '/lock',
+            type: 'POST',
+            data: {
+                'key_mode': $('#key_mode').is(":checked"),
+                "auto_mode": $('#auto_mode').is(":checked"),
+                "unlock": $('#unlock').is(":checked")
+            },
+            success: function(result) {
+                if (result == "good") {
+                    alert('적용 되었습니다:p');
+                } else {
+                    alert('적용 실패');
+                }
+            }
+        });
+    });
+</script>
+</html>
